@@ -22,7 +22,7 @@ class Auto:
     def cantidadAsientos(self):
         númeroAsientos = 0
         for i in self.asientos:
-            if type(i) == type(Asiento('negro',100,123):
+            if isinstance(i, Asiento):
                 númeroAsientos += 1
         return númeroAsientos
 
@@ -30,7 +30,7 @@ class Auto:
         if self.registro != self.motor.registro:
             return "Las piezas no son originales"
         for i in self.asientos:
-            if type(i) == type(Asiento('negro',100,123)):
+            if isinstance(i, Asiento):
                 if i.registro != self.registro:
                     return "Las piezas no son originales"
         return "Auto original"
